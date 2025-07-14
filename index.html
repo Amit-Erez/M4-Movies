@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Databse</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/03474dd0d4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <figure class="amit__logo--wrapper">
+          <img class="amit__logo" src="./assets/AE-LOGO resize.svg" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a href="#" class="nav__link--anchor link__hover-effect"> Home </a>
+          </li>
+          <li class="nav__link">
+            <a href="#" class="nav__link--anchor link__hover-effect">
+              Find Your Movie
+            </a>
+          </li>
+          <li class="nav__link">
+            <a href="#contact" class="nav__link--anchor btn__contact">
+              contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="title__content">
+        <h1 class="title__content--title">Browse our movies</h1>
+        <div class="input-wrap">
+          <input type="text" placeholder="Search by movie title or keyword" />
+          <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <figure class="bg__img--wrapper">
+        <img src="./assets/film header bg.JPG" class="bg__img" alt="" />
+      </figure>
+    </header>
+    <section id="results">
+      <div class="container">
+        <div class="row">
+          <div class="results__bar">
+            <h1 class="search__info">Search Results:</h1>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="LOW_TO_HIGH" class="sort__option">By Title A - Z</option>
+              <option value="HIGH_TO_LOW" class="sort__option">By Title Z - A</option>
+              <option value="RATING" class="sort__option">Old to New</option>
+              <option value="RATING" class="sort__option">New to Old</option>
+            </select>
+          </div>
+          <div class="movies__list">
+            <div class="movie">
+              <div class="movie__card">
+                <figure class="movie__poster--wrapper">
+                  <a href="">
+                    <img
+                      src="./assets/movieposter.jpg"
+                      class="movie__poster"
+                      alt=""
+                    />
+                  </a>
+                  <div class="poster__wrapper--after">
+                    <P class="more__info">More Info</P>
+                  </div>
+                </figure>
+                <h3 class="movie__title">Movie Title</h3>
+                <p class="movie__year">2026</p>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie__card">
+                <figure class="movie__poster--wrapper">
+                  <a href="">
+                    <img
+                      src="./assets/movieposter.jpg"
+                      class="movie__poster"
+                      alt=""
+                    />
+                  </a>
+                  <div class="poster__wrapper--after">
+                    <P class="more__info">More Info</P>
+                  </div>
+                </figure>
+                <h3 class="movie__title">Movie Title</h3>
+                <p class="movie__year">2026</p>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie__card">
+                <figure class="movie__poster--wrapper">
+                  <a href="">
+                    <img
+                      src="./assets/movieposter.jpg"
+                      class="movie__poster"
+                      alt=""
+                    />
+                  </a>
+                  <div class="poster__wrapper--after">
+                    <P class="more__info">More Info</P>
+                  </div>
+                </figure>
+                <h3 class="movie__title">Movie Title</h3>
+                <p class="movie__year">2026</p>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie__card">
+                <figure class="movie__poster--wrapper">
+                  <a href="">
+                    <img
+                      src="./assets/movieposter.jpg"
+                      class="movie__poster"
+                      alt=""
+                    />
+                  </a>
+                  <div class="poster__wrapper--after">
+                    <P class="more__info">More Info</P>
+                  </div>
+                </figure>
+                <h3 class="movie__title">Movie Title</h3>
+                <p class="movie__year">2026</p>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie__card">
+                <figure class="movie__poster--wrapper">
+                  <a href="">
+                    <img
+                      src="./assets/movieposter.jpg"
+                      class="movie__poster"
+                      alt=""
+                    />
+                  </a>
+                  <div class="poster__wrapper--after">
+                    <P class="more__info">More Info</P>
+                  </div>
+                </figure>
+                <h3 class="movie__title">Movie Title</h3>
+                <p class="movie__year">2026</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
