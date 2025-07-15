@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
 
+html {
+    /* overflow-x: hidden; */
+}
+
 * {
 margin: 0;
 padding: 0;
@@ -49,12 +53,12 @@ position: relative;
 .bg__img--wrapper {
 position: absolute;
 top: -200px;
+width: 100%;
 }
 
 .bg__img {
-width: 100%;
+width: 100%;    
 max-width: 1920px;
-min-width: 925px;
 opacity: 0.3;
 z-index: 0;
 mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
@@ -272,6 +276,7 @@ RESULTS SECTION
   display: flex;
   justify-content: center;
   margin-bottom: 36px;
+
 }
 
 .movie__card {
@@ -290,6 +295,7 @@ RESULTS SECTION
 
 .movie__poster--wrapper {
     position: relative;
+    
 }
 
 .poster__wrapper--after {
@@ -305,7 +311,7 @@ RESULTS SECTION
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    transition: all 300ms ease
+    transition: all 300ms ease;
 }
 
 .movie__card:hover .poster__wrapper--after {
@@ -321,7 +327,7 @@ RESULTS SECTION
 }
 
 .movie__poster {
-    width: 215.19px;
+    width: 100%;
     height: 319.91px;
 }
 
@@ -376,5 +382,70 @@ RESULTS SECTION
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1100px) {
+    .movie {
+        width: calc(100% / 3)
+    }
+}
+
+@media (max-width: 768px) {
+    .movie {
+        width: 50%;
+    }
+
+    .nav__link--list {
+        max-width: 380px;
+    }
+
+    .title__content--title {
+        font-size: 36px;
+    }
+
+    .input-wrap {
+        max-width: 500px;
+    }
+
+    .bg__img--wrapper {
+        top: -50px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .bg__img--wrapper {
+        top: 0px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    .nav__link--list {
+        max-width: 320px;
+    }
+
+    .btn__contact {
+        padding: 12px 20px;
+    }
+
+    .title__content--title {
+        font-size: 28px;
+    }
+
+    .movie {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        display: none;
+    }
+
+    .bg__img--wrapper {
+        top: 0px;
     }
 }
