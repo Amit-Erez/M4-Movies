@@ -36,14 +36,14 @@
       <div class="title__content">
         <h1 class="title__content--title">Browse our movies</h1>
         <div class="input-wrap">
-          <input type="text" placeholder="Search by movie title or keyword" />
+          <input type="text" placeholder="Search by movie title or keyword" onchange="onSearchChange(event)"/>
           <div class="search-wrapper">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
       </div>
       <figure class="bg__img--wrapper">
-        <img src="./assets/film header bg.JPG" class="bg__img" alt="" />
+        <img src="./assets/film header bg cropped.JPG" class="bg__img .image-fade-bottom" alt="" />
       </figure>
     </header>
     <section id="results">
@@ -53,105 +53,19 @@
             <h1 class="search__info">Search Results:</h1>
             <select id="filter" onchange="filterMovies(event)">
               <option value="" disabled selected>Sort</option>
-              <option value="LOW_TO_HIGH" class="sort__option">By Title A - Z</option>
-              <option value="HIGH_TO_LOW" class="sort__option">By Title Z - A</option>
-              <option value="RATING" class="sort__option">Old to New</option>
-              <option value="RATING" class="sort__option">New to Old</option>
+              <option value="By_Title_A-Z" class="sort__option">By Title A-Z</option>
+              <option value="By_Title_Z-A" class="sort__option">By Title Z-A</option>
+              <option value="Old_to_New" class="sort__option">Old to New</option>
+              <option value="New_to_Old" class="sort__option">New to Old</option>
             </select>
           </div>
-          <div class="movies__list">
-            <div class="movie">
-              <div class="movie__card">
-                <figure class="movie__poster--wrapper">
-                  <a href="">
-                    <img
-                      src="./assets/movieposter.jpg"
-                      class="movie__poster"
-                      alt=""
-                    />
-                  </a>
-                  <div class="poster__wrapper--after">
-                    <P class="more__info">More Info</P>
-                  </div>
-                </figure>
-                <h3 class="movie__title">Movie Title</h3>
-                <p class="movie__year">2026</p>
-              </div>
-            </div>
-            <div class="movie">
-              <div class="movie__card">
-                <figure class="movie__poster--wrapper">
-                  <a href="">
-                    <img
-                      src="./assets/movieposter.jpg"
-                      class="movie__poster"
-                      alt=""
-                    />
-                  </a>
-                  <div class="poster__wrapper--after">
-                    <P class="more__info">More Info</P>
-                  </div>
-                </figure>
-                <h3 class="movie__title">Movie Title</h3>
-                <p class="movie__year">2026</p>
-              </div>
-            </div>
-            <div class="movie">
-              <div class="movie__card">
-                <figure class="movie__poster--wrapper">
-                  <a href="">
-                    <img
-                      src="./assets/movieposter.jpg"
-                      class="movie__poster"
-                      alt=""
-                    />
-                  </a>
-                  <div class="poster__wrapper--after">
-                    <P class="more__info">More Info</P>
-                  </div>
-                </figure>
-                <h3 class="movie__title">Movie Title</h3>
-                <p class="movie__year">2026</p>
-              </div>
-            </div>
-            <div class="movie">
-              <div class="movie__card">
-                <figure class="movie__poster--wrapper">
-                  <a href="">
-                    <img
-                      src="./assets/movieposter.jpg"
-                      class="movie__poster"
-                      alt=""
-                    />
-                  </a>
-                  <div class="poster__wrapper--after">
-                    <P class="more__info">More Info</P>
-                  </div>
-                </figure>
-                <h3 class="movie__title">Movie Title</h3>
-                <p class="movie__year">2026</p>
-              </div>
-            </div>
-            <div class="movie">
-              <div class="movie__card">
-                <figure class="movie__poster--wrapper">
-                  <a href="">
-                    <img
-                      src="./assets/movieposter.jpg"
-                      class="movie__poster"
-                      alt=""
-                    />
-                  </a>
-                  <div class="poster__wrapper--after">
-                    <P class="more__info">More Info</P>
-                  </div>
-                </figure>
-                <h3 class="movie__title">Movie Title</h3>
-                <p class="movie__year">2026</p>
-              </div>
-            </div>
-            
-          </div>
+           <div class="movies__list--container .movies__loading">
+               <i class="fa-solid fa-spinner movies__loading--spinner"></i>
+               <div class="movies__list">
+               
+               
+               </div>
+           </div> 
         </div>
       </div>
     </section>
